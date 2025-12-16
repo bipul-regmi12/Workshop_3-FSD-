@@ -1,0 +1,10 @@
+index.nginx-debian.html
+.DS_Store
+node_modules/
+dist/
+.env
+.vscode/
+.idea/
+*.log
+coverage/
+*.tmp

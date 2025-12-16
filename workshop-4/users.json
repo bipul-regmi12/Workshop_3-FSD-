@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Alice Johnson",
+        "email": "alice@example.com",
+        "password": "$2y$10$wH3jFqB8N4Y2uZsE8Q6HkO5xv5yO3f1rP6QZbVxJx3xG3FvD7bA1e",
+        "registered_at": "2025-12-09 10:00:00"
+    },
+    {
+        "name": "Bob Smith",
+        "email": "bob@example.com",
+        "password": "$2y$10$eX4vN9kF3L6sY8tR1uG5JpD7cQ9vB2nR4H6M1QkO7sY2wT5E9xJ1a",
+        "registered_at": "2025-12-09 10:05:00"
+    },
+    {
+        "name": "Charlie Brown",
+        "email": "charlie@example.com",
+        "password": "$2y$10$Q9nF2L5vR6xH1kM3tE4pY9jV8wC2sG7bN5kO1rZ4tU8dJ3pB6cA0l",
+        "registered_at": "2025-12-09 10:10:00"
+    },
+    {
+        "name": "Bipul Regmi",
+        "email": "regmibipul2015@gmail.com",
+        "password": "$2y$10$ZY7gnme734wZNvHA25g5sek99hibt1B8VCLmjXI2aEYu/qgZMesF6",
+        "registered_at": "2025-12-12 03:25:10"
+    },
+    {
+        "name": "Bipul Regmi",
+        "email": "regmibipul2018@gmail.com",
+        "password": "$2y$10$tPK5aY59GYmn30vfTV34KedO7qtZ2irDgo3IAoED5ePJXq0uxRdq.",
+        "registered_at": "2025-12-12 03:25:51"
+    },
+    {
+        "name": "Ujwal Nigga",
+        "email": "gayassujwal@pornhub.com",
+        "password": "$2y$10$2zpP029mXkxLPdvJyfqGuePJRGsdGQQGeVUR.iHr4JpXnezzT/JqW",
+        "registered_at": "2025-12-16 01:40:12"
+    }
+]
