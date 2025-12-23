@@ -3,7 +3,7 @@
 <h2>Registered Students</h2>
 
 <?php
-$file = 'students.txt';
+$file = __DIR__ . '/students.txt';
 
 if (file_exists($file)) {
     $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -16,7 +16,10 @@ if (file_exists($file)) {
                 echo "<li>";
                 echo "<strong>Name:</strong> " . htmlspecialchars($student['name']) . "<br>";
                 echo "<strong>Email:</strong> " . htmlspecialchars($student['email']) . "<br>";
-                echo "<strong>Skills:</strong> " . implode(", ", array_map('htmlspecialchars', $student['skills']));
+                echo "<strong>Skills:</strong> " . implode(", ", array_map('htmlspecialchars', $student['skills'])) . "<br>";
+                if (isset($student['timestamp'])) {
+                    echo "<strong>Registered:</strong> " . htmlspecialchars($student['timestamp']);
+                }
                 echo "</li><br>";
             }
         }

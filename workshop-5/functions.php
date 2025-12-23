@@ -25,20 +25,52 @@ function saveStudent($name, $email, $skillsArray)
     $data = [
         'name' => $name,
         'email' => $email,
-        'skills' => $skillsArray
+        'skills' => $skillsArray,
+        'timestamp' => date('Y-m-d H:i:s')
     ];
+
     // Saving as JSON line for easy reading later
-    $line = json_encode($data) . PHP_EOL;
-    if (file_put_contents('students.txt', $line, FILE_APPEND) === false) {
-        throw new Exception("Failed to save student data.");
+    $filename = __DIR__ . '/students.txt';
+
+    // Check if directory is writable
+    if (!is_writable(__DIR__)) {
+        throw new Exception("Directory is not writable. Run: sudo chmod 775 " . __DIR__);
+    }
+
+    // Create file if it doesn't exist
+    if (!file_exists($filename)) {
+        if (file_put_contents($filename, '') === false) {
+            throw new Exception("Failed to create data file. Check directory permissions.");
+        }
+        chmod($filename, 0666);
+    }
+
+    // Encode data
+    $json = json_encode($data);
+    if ($json === false) {
+        throw new Exception("Failed to encode data to JSON.");
+    }
+
+    $line = $json . PHP_EOL;
+
+    // Write to file
+    if (file_put_contents($filename, $line, FILE_APPEND | LOCK_EX) === false) {
+        throw new Exception("Failed to save student data. Check file permissions.");
     }
 }
 
 function uploadPortfolioFile($file)
 {
-    $targetDir = "uploads/";
+    $targetDir = __DIR__ . "/uploads/";
     if (!is_dir($targetDir)) {
-        mkdir($targetDir, 0777, true);
+        if (!mkdir($targetDir, 0777, true)) {
+            throw new Exception("Failed to create uploads directory. Check permissions.");
+        }
+    }
+
+    // Check if directory is writable
+    if (!is_writable($targetDir)) {
+        throw new Exception("Uploads directory is not writable.");
     }
 
     $fileName = basename($file["name"]);
