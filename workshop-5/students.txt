@@ -1,2 +1,3 @@
 {"name":"Asdfa","email":"asdfa@gmail.com","skills":["PHP","HTML","CSS"],"timestamp":"2025-12-23 15:49:57"}
 {"name":"Ujwal Nigga","email":"np03cs4a240282@heraldcollege.edu.np","skills":["PHP","HTML"],"timestamp":"2025-12-23 15:51:15"}
+{"name":"Bipul Regmi","email":"gayherald@gmail.com","skills":["MYSql"],"timestamp":"2025-12-23 16:35:49"}

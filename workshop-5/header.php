@@ -181,5 +181,6 @@
         <a href="add_student.php">Add Student Info</a>
         <a href="upload.php">Upload Portfolio</a>
         <a href="students.php">View Students</a>
+        <a href="view_portfolios.php">View Portfolios</a>
     </nav>
     <hr>

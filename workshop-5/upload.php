@@ -5,7 +5,7 @@ $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['portfolio'])) {
     try {
         $result = uploadPortfolioFile($_FILES['portfolio']);
-        $message = "<div class='message success'>$result</div>";
+        $message = "<div class='message success'>$result<br><br><a href='view_portfolios.php' style='color: #155724; font-weight: bold;'>View All Portfolios</a></div>";
     } catch (Exception $e) {
         $message = "<div class='message error'>Error: " . $e->getMessage() . "</div>";
     }

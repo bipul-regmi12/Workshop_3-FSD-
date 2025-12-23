@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $skills = cleanSkills($_POST['skills'] ?? '');
 
         saveStudent($name, $email, $skills);
-        $message = "<div class='message success'>Student saved successfully!</div>";
+        $message = "<div class='message success'>Student saved successfully!<br><br><a href='students.php' style='color: #155724; font-weight: bold;'>View All Students</a> | <a href='upload.php' style='color: #155724; font-weight: bold;'>Upload Portfolio</a></div>";
     } catch (Exception $e) {
         $message = "<div class='message error'>Error: " . $e->getMessage() . "</div>";
     }

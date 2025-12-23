@@ -24,6 +24,7 @@ if (file_exists($file)) {
             }
         }
         echo "</ul>";
+        echo "<br><div style='text-align: center;'><a href='view_portfolios.php' style='display: inline-block; background-color: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;'>View All Portfolios</a></div>";
     } else {
         echo "<p>No students found.</p>";
     }
