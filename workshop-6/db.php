@@ -1,9 +1,17 @@
 <?php
 $host = 'localhost';
-$db   = 'school_db';
-$user = 'root'; 
-$pass = 'RootPassword123!';
+// $db   = 'school_db';
+// $user = 'root'; 
+// $pass = 'RootPassword123!';
 $charset = 'utf8mb4';
+
+// $host = 'localhost'
+$db = "np03cs4a240282";
+$user = "np03cs4a240282";
+$pass = "04a09vyPAh";
+
+
+
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [

@@ -44,7 +44,7 @@
         <div class="modal-content">
             <h3>System Warning</h3>
             <p>Initiating deletion sequence. This action is irreversible.<br>
-                <span style="color: #ff0055; font-weight: bold;">Auto-abort in: <span id="timerCount">5</span>
+                <span style="color: #ff0055; font-weight: bold;">Abdul: <span id="timerCount">5</span>
                     seconds</span>
             </p>
             <div class="modal-actions">
