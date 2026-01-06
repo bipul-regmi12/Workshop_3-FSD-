@@ -22,9 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <title>Register</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,60 +39,79 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            background: #f5f5f5;
+            border: 3px solid #ff0000;
+            padding: 40px;
+            width: 400px;
+            text-align: left;
         }
 
         h2 {
             text-align: center;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 20px;
+            color: #000000;
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
         }
 
         label {
             display: block;
-            margin-bottom: 5px;
-            color: #555;
-            font-weight: bold;
+            margin-bottom: 8px;
+            color: #000000;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         input {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #000000;
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #ff0000;
         }
 
         button {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
+            padding: 15px;
+            background-color: #ff0000;
+            color: #ffffff;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.2s;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #cc0000;
         }
 
         p {
-            text-align: center;
-            margin-top: 15px;
-            margin-bottom: 0;
+            text-align: left;
+            margin-top: 20px;
+            color: #000000;
+            font-size: 14px;
         }
 
         a {
-            color: #4CAF50;
+            color: #ff0000;
             text-decoration: none;
+            font-weight: 500;
         }
 
         a:hover {

@@ -21,8 +21,14 @@ $theme = isset($_COOKIE['theme']) ? $_COOKIE['theme'] : 'light';
 <head>
     <title>Preferences</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             min-height: 100vh;
@@ -30,81 +36,108 @@ $theme = isset($_COOKIE['theme']) ? $_COOKIE['theme'] : 'light';
                 background-color: #1a1a1a;
                 color: #ffffff;
             <?php else: ?>
-                background-color: #f4f4f4;
-                color: #333333;
+                background-color: #ffffff;
+                color: #000000;
             <?php endif; ?>
         }
 
         .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 40px;
             <?php if ($theme == 'dark'): ?>
-                background-color: #2d2d2d;
+                background-color: #000000;
+                border: 3px solid #ffffff;
             <?php else: ?>
-                background-color: #ffffff;
+                background-color: #f5f5f5;
+                border: 3px solid #000000;
             <?php endif; ?>
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             text-align: center;
             margin-bottom: 30px;
+            <?php if ($theme == 'dark'): ?>
+                color: #ffffff;
+            <?php else: ?>
+                color: #000000;
+            <?php endif; ?>
+            font-weight: 700;
+            font-size: 36px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
         }
 
         form {
-            text-align: center;
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         label {
             display: block;
             margin-bottom: 10px;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            <?php if ($theme == 'dark'): ?>
+                color: #ffffff;
+            <?php else: ?>
+                color: #000000;
+            <?php endif; ?>
         }
 
         select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
             font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
             <?php if ($theme == 'dark'): ?>
-                background-color: #404040;
+                background-color: #1a1a1a;
                 color: #ffffff;
+                border: 2px solid #ffffff;
             <?php else: ?>
                 background-color: #ffffff;
-                color: #333333;
+                color: #000000;
+                border: 2px solid #000000;
             <?php endif; ?>
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #ff0000;
         }
 
         button {
             width: 100%;
-            padding: 10px;
-            background-color: #FF9800;
-            color: white;
+            padding: 15px;
+            background-color: #ff0000;
+            color: #ffffff;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.2s;
         }
 
         button:hover {
-            background-color: #e68900;
+            background-color: #cc0000;
         }
 
         a {
             display: block;
-            text-align: center;
-            <?php if ($theme == 'dark'): ?>
-                color: #4da6ff;
-            <?php else: ?>
-                color: #2196F3;
-            <?php endif; ?>
+            text-align: left;
+            color: #ff0000;
             text-decoration: none;
-            margin-top: 15px;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         a:hover {

@@ -1,13 +1,13 @@
 <?php
-// $host = 'localhost';
-// $db = 'np03cs4a240282';
-// $user = 'np03cs4a240282';
-// $pass = '04a09vyPAh';
-
 $host = 'localhost';
-$db = 'student_portal';
-$user = 'root';
-$pass = 'RootPassword123!';
+$db = 'np03cs4a240282';
+$user = 'np03cs4a240282';
+$pass = '04a09vyPAh';
+
+// $host = 'localhost';
+// $db = 'student_portal';
+// $user = 'root';
+// $pass = 'RootPassword123!';
 
 try {
     // Connect without database first

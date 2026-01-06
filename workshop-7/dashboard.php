@@ -20,8 +20,14 @@ if (isset($_GET['logout'])) {
 <head>
     <title>Dashboard</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             min-height: 100vh;
@@ -29,55 +35,76 @@ if (isset($_GET['logout'])) {
                 background-color: #1a1a1a;
                 color: #ffffff;
             <?php else: ?>
-                background-color: #f4f4f4;
-                color: #333333;
+                background-color: #ffffff;
+                color: #000000;
             <?php endif; ?>
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 60px 40px;
         }
 
         h2 {
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            <?php if ($theme == 'dark'): ?>
+                color: #ffffff;
+            <?php else: ?>
+                color: #000000;
+            <?php endif; ?>
+            font-weight: 700;
+            font-size: 48px;
+            letter-spacing: -2px;
+            text-transform: uppercase;
         }
 
         nav {
-            text-align: center;
-            padding: 20px;
+            padding: 30px;
             <?php if ($theme == 'dark'): ?>
-                background-color: #2d2d2d;
+                background-color: #000000;
+                border: 3px solid #ffffff;
             <?php else: ?>
-                background-color: #ffffff;
+                background-color: #f5f5f5;
+                border: 3px solid #000000;
             <?php endif; ?>
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            padding: 15px 30px;
+            transition: all 0.2s;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
             <?php if ($theme == 'dark'): ?>
                 color: #ffffff;
-                background-color: #404040;
+                background-color: #ff0000;
+                border: 2px solid #ff0000;
             <?php else: ?>
-                color: #333333;
-                background-color: #e0e0e0;
+                color: #ffffff;
+                background-color: #ff0000;
+                border: 2px solid #ff0000;
             <?php endif; ?>
         }
 
         nav a:hover {
             <?php if ($theme == 'dark'): ?>
-                background-color: #505050;
+                background-color: #ffffff;
+                color: #000000;
+                border-color: #ffffff;
             <?php else: ?>
-                background-color: #d0d0d0;
+                background-color: #000000;
+                color: #ffffff;
+                border-color: #000000;
             <?php endif; ?>
         }
     </style>
