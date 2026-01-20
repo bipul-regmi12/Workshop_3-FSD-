@@ -12,3 +12,5 @@ blade_project/
 pet_adoption/
 twig_project/
 index.nginx-debian.html
+vendor/ 
+cache/
