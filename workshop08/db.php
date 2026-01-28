@@ -1,14 +1,14 @@
 <?php
-$host = 'localhost';
-$db = 'school_db';
-$user = 'root';
-$pass = 'RootPassword123!';
-
-
 // $host = 'localhost';
-// $db = 'np03cs4a240282';
-// $user = 'np03cs4a240282';
-// $pass = '04a09vyPAh';
+// $db = 'school_db';
+// $user = 'root';
+// $pass = 'RootPassword123!';
+
+
+$host = 'localhost';
+$db = 'np03cs4a240282';
+$user = 'np03cs4a240282';
+$pass = '04a09vyPAh';
 
 try {
     $serverPdo = new PDO(
