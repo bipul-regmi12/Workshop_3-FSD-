@@ -1,3 +1,28 @@
+# Ignore everything
+*
+
+# Except workshop folders
+!workshop*/
+!workshop*/**
+!*_workshop/
+!*_workshop/**
+
+# Keep .gitignore itself
+!.gitignore
+
+# Specific ignores (for documentation)
+# index.nginx-debian.html
+# .DS_Store
+# node_modules/
+# dist/
+# .env
+# .vscode/
+# .idea/
+# *.log
+# coverage/
+# *.tmp
+# vendor/
+# cache/
 index.nginx-debian.html
 .DS_Store
 node_modules/
